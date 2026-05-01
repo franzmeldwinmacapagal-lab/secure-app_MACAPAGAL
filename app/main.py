@@ -58,5 +58,4 @@ def get_user(user_id: int):
         "name": "Demo User"
     }), 200
 if __name__ == '__main__':
-    # Never run with debug=True in production
-    app.run(host='0.0.0.0', port=8080, debug=False)
+    app.run(host='127.0.0.1', port=8080, debug=False)
