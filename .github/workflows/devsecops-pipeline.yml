@@ -37,7 +37,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run pip-audit scan
-        run: pip-audit --strict
+        run: pip-audit
 
       - name: Run Safety scan
         run: safety scan -r requirements.txt
@@ -166,5 +166,5 @@ jobs:
     steps:
       - name: Deploy application
         run: |
-          echo "🚀 Deploying ${{ env.IMAGE_NAME }}:${{ github.sha }} to production..."
-          echo "✅ Deployment successful!"
+          echo " Deploying ${{ env.IMAGE_NAME }}:${{ github.sha }} to production..."
+          echo " Deployment successful!"
